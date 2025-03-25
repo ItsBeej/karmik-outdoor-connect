@@ -100,10 +100,10 @@ const Hero = () => {
                 </div>
                 <div className="bg-gray-900 p-0.5">
                   <img 
-                    src="/placeholder.svg"
+                    src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
                     alt="Karmik dashboard interface" 
                     className="w-full h-auto"
-                    style={{ aspectRatio: "16/10", objectFit: "cover" }}
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
               </div>
