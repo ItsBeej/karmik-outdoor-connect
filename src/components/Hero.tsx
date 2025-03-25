@@ -1,0 +1,112 @@
+
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play } from "lucide-react";
+
+const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 90;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-white to-secondary/20">
+      <div 
+        className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
+        aria-hidden="true"
+      >
+        <div className="absolute w-96 h-96 -top-10 -right-10 bg-karmik-50 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
+      </div>
+      
+      <div className="container max-w-7xl px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
+            <span className="px-4 py-1.5 bg-karmik-500/10 text-karmik-600 text-xs rounded-full font-medium">
+              Revolutionizing Outdoor Gear Rentals
+            </span>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
+              Transform Your Rental Business with{" "}
+              <span className="bg-gradient-to-r from-karmik-400 to-karmik-600 bg-clip-text text-transparent">
+                Karmik
+              </span>
+            </h1>
+            
+            <p className="text-lg text-muted-foreground max-w-lg">
+              The premier SaaS platform designed exclusively for specialty outdoor retail stores. Streamline operations, boost revenue, and provide exceptional customer experiences.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button 
+                size="lg" 
+                className="bg-karmik-500 hover:bg-karmik-600 shadow-sm group"
+                onClick={() => scrollToSection("contact")}
+              >
+                Book a Demo Call
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="shadow-sm"
+                onClick={() => scrollToSection("video")}
+              >
+                <Play className="mr-2 h-4 w-4 text-karmik-500" />
+                Watch Product Video
+              </Button>
+            </div>
+            
+            <div className="flex items-center gap-4 pt-4">
+              <div className="flex -space-x-2">
+                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">M</div>
+                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">S</div>
+                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">R</div>
+                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">P</div>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Trusted by <span className="text-foreground font-medium">45+</span> outdoor retailers
+              </p>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-6 animate-fade-in" style={{ '--index': 1 } as React.CSSProperties}>
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-br from-karmik-100 to-karmik-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
+              <div className="relative overflow-hidden rounded-2xl shadow-lg subtle-shadow">
+                <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm border border-white/20">
+                  <div className="flex gap-1.5 px-2">
+                    <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                    <div className="w-2.5 h-2.5 bg-amber-400 rounded-full"></div>
+                    <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
+                  </div>
+                </div>
+                <div className="bg-gray-900 p-0.5">
+                  <img 
+                    src="/placeholder.svg"
+                    alt="Karmik dashboard interface" 
+                    className="w-full h-auto"
+                    style={{ aspectRatio: "16/10", objectFit: "cover" }}
+                  />
+                </div>
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-karmik-500 rounded-full blur-3xl opacity-20"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
