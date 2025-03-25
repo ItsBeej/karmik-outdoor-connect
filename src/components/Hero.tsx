@@ -39,10 +39,6 @@ const Hero = () => {
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
-            <span className="px-4 py-1.5 bg-green-100 text-green-800 text-xs rounded-full font-medium">
-              Revolutionizing Outdoor Gear Rentals
-            </span>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
               Transform Your Rental Business with{" "}
               <span className="bg-gradient-to-r from-karmik-400 to-karmik-600 bg-clip-text text-transparent">
@@ -98,7 +94,7 @@ const Hero = () => {
                     <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
                   </div>
                 </div>
-                <div className="bg-gray-900 p-0.5">
+                <div>
                   <img 
                     src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
                     alt="Karmik dashboard interface" 
