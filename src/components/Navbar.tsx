@@ -60,11 +60,12 @@ const Navbar = () => {
         <div className="container max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <a
-                href="#"
-                className="text-2xl font-display font-bold bg-gradient-to-r from-karmik-500 to-karmik-600 bg-clip-text text-transparent"
-              >
-                Karmik
+              <a href="#" className="flex items-center">
+                <img 
+                  src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
+                  alt="Karmik Solutions" 
+                  className="h-8 md:h-10"
+                />
               </a>
             </div>
             
@@ -113,6 +114,11 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center h-[80vh] space-y-8">
+            <img 
+              src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
+              alt="Karmik Solutions" 
+              className="h-10 mb-6" 
+            />
             <button onClick={() => scrollToSection("features")} className="text-xl font-medium transition-colors hover:text-karmik-500">
               Features
             </button>

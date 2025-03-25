@@ -1,13 +1,11 @@
-
 import { 
   Calendar, 
   LineChart, 
   BarChart, 
   ShoppingBag, 
   Users, 
-  Cpu, 
-  Database, 
   Clock, 
+  Database, 
   QrCode 
 } from "lucide-react";
 
@@ -46,11 +44,6 @@ const features = [
     icon: <Database className="h-5 w-5 text-karmik-500" />,
     title: "Secure Cloud Storage",
     description: "Access your data anywhere with our secure, cloud-based platform."
-  },
-  {
-    icon: <Cpu className="h-5 w-5 text-karmik-500" />,
-    title: "API Integration",
-    description: "Connect seamlessly with your existing POS and e-commerce systems."
   },
   {
     icon: <BarChart className="h-5 w-5 text-karmik-500" />,

@@ -8,8 +8,12 @@ const Footer = () => {
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
-            <a href="#" className="text-2xl font-display font-bold bg-gradient-to-r from-karmik-500 to-karmik-600 bg-clip-text text-transparent">
-              Karmik
+            <a href="#" className="inline-block">
+              <img 
+                src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
+                alt="Karmik Solutions" 
+                className="h-10 mb-4" 
+              />
             </a>
             <p className="mt-4 text-muted-foreground">
               Transforming outdoor gear rentals for specialty retail stores worldwide.
