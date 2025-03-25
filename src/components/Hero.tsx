@@ -20,19 +20,26 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-white to-secondary/20">
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50 to-karmik-50">
+      {/* Nature-inspired background pattern */}
       <div 
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
         aria-hidden="true"
       >
-        <div className="absolute w-96 h-96 -top-10 -right-10 bg-karmik-50 rounded-full opacity-30 blur-3xl"></div>
+        <div className="absolute w-full h-full opacity-10 mix-blend-soft-light">
+          <svg className="absolute left-0 top-0 w-full h-full" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path className="fill-current text-green-700" d="M0 0 Q 2.5 40 5 0 Q 7.5 40 10 0 Q 12.5 40 15 0 Q 17.5 40 20 0 Q 22.5 40 25 0 Q 27.5 40 30 0 Q 32.5 40 35 0 Q 37.5 40 40 0 Q 42.5 40 45 0 Q 47.5 40 50 0 Q 52.5 40 55 0 Q 57.5 40 60 0 Q 62.5 40 65 0 Q 67.5 40 70 0 Q 72.5 40 75 0 Q 77.5 40 80 0 Q 82.5 40 85 0 Q 87.5 40 90 0 Q 92.5 40 95 0 Q 97.5 40 100 0 V 100 H 0 Z"></path>
+          </svg>
+        </div>
+        <div className="absolute w-96 h-96 -top-20 -right-20 bg-green-200 rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute w-full h-full opacity-5" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
       </div>
       
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
-            <span className="px-4 py-1.5 bg-karmik-500/10 text-karmik-600 text-xs rounded-full font-medium">
+            <span className="px-4 py-1.5 bg-green-100 text-green-800 text-xs rounded-full font-medium">
               Revolutionizing Outdoor Gear Rentals
             </span>
             
@@ -59,7 +66,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="shadow-sm"
+                className="shadow-sm bg-white/80 backdrop-blur-sm border-green-200 hover:bg-green-50 transition-all"
                 onClick={() => scrollToSection("video")}
               >
                 <Play className="mr-2 h-4 w-4 text-karmik-500" />
@@ -69,10 +76,10 @@ const Hero = () => {
             
             <div className="flex items-center gap-4 pt-4">
               <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">M</div>
-                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">S</div>
-                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">R</div>
-                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-white text-xs font-semibold text-muted-foreground">P</div>
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-green-800">M</div>
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-green-800">S</div>
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-green-800">R</div>
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-green-800">P</div>
               </div>
               <p className="text-sm text-muted-foreground">
                 Trusted by <span className="text-foreground font-medium">45+</span> outdoor retailers
@@ -82,7 +89,7 @@ const Hero = () => {
           
           <div className="lg:col-span-6 animate-fade-in" style={{ '--index': 1 } as React.CSSProperties}>
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-karmik-100 to-karmik-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-green-100 to-blue-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
               <div className="relative overflow-hidden rounded-2xl shadow-lg subtle-shadow">
                 <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm border border-white/20">
                   <div className="flex gap-1.5 px-2">
@@ -100,6 +107,7 @@ const Hero = () => {
                   />
                 </div>
               </div>
+              <div className="absolute top-1/2 -left-4 w-14 h-14 bg-green-500 rounded-full blur-2xl opacity-20"></div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-karmik-500 rounded-full blur-3xl opacity-20"></div>
             </div>
           </div>
