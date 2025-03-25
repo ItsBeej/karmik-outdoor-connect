@@ -27,8 +27,8 @@ const VideoSection = () => {
           <div className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => setVideoOpen(true)}>
             <div className="aspect-video bg-gray-100 relative">
               <img 
-                src="/placeholder.svg" 
-                alt="Karmik Product Video Thumbnail" 
+                src="/lovable-uploads/ed6af07f-2c3e-4f69-b1f4-9d5b579b47cb.png" 
+                alt="Karmik Product Demo - Reservations Dashboard" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity group-hover:bg-black/40">
