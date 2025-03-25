@@ -66,7 +66,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="shadow-sm bg-white/80 backdrop-blur-sm border-green-200 hover:bg-green-50 transition-all"
+                className="shadow-sm bg-white/80 backdrop-blur-sm hover:bg-green-50 transition-all"
                 onClick={() => scrollToSection("video")}
               >
                 <Play className="mr-2 h-4 w-4 text-karmik-500" />
