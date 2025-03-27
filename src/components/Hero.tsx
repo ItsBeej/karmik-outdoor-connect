@@ -29,9 +29,10 @@ const Hero = () => {
         {/* Mountain landscape background */}
         <div className="absolute inset-0 w-full h-full opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80" 
+            src="/lovable-uploads/3b9c85ae-53fe-4fad-8b2f-06e1eafa2c64.jpg" 
             alt="Mountain landscape" 
             className="w-full h-full object-cover"
+            style={{ opacity: 0.15 }}
           />
         </div>
         <div className="absolute w-96 h-96 -top-20 -right-20 bg-karmik-200 rounded-full opacity-20 blur-3xl"></div>
