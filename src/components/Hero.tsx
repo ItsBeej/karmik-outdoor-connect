@@ -26,11 +26,11 @@ const Hero = () => {
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
         aria-hidden="true"
       >
-        {/* Mountain landscape background */}
-        <div className="absolute inset-0 w-full h-full opacity-15">
+        {/* Outdoor gear shop background */}
+        <div className="absolute inset-0 w-full h-full">
           <img 
-            src="/lovable-uploads/3b9c85ae-53fe-4fad-8b2f-06e1eafa2c64.jpg" 
-            alt="Mountain landscape" 
+            src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
+            alt="Outdoor gear shop" 
             className="w-full h-full object-cover"
             style={{ opacity: 0.15 }}
           />
