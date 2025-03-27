@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Mountain, TreePine } from "lucide-react";
 
@@ -31,8 +30,7 @@ const Hero = () => {
           <img 
             src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
             alt="Outdoor gear shop" 
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.15 }}
+            className="w-full h-full object-cover opacity-15"
           />
         </div>
         <div className="absolute w-96 h-96 -top-20 -right-20 bg-karmik-200 rounded-full opacity-20 blur-3xl"></div>
