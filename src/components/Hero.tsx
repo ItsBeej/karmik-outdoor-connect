@@ -21,20 +21,18 @@ const Hero = () => {
 
   return (
     <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-karmik-50 to-white">
-      {/* Nature-inspired background pattern */}
+      {/* Full background image with no opacity */}
       <div 
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
         aria-hidden="true"
       >
-        {/* Outdoor gear shop background */}
-        <div className="absolute inset-0 w-full h-full bg-opacity-25">
-          <img 
-            src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
-            alt="Outdoor gear shop" 
-            className="w-full h-full object-cover"
-            style={{ opacity: 0.15 }}
-          />
-        </div>
+        <img 
+          src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
+          alt="Outdoor gear shop" 
+          className="w-full h-full object-cover"
+        />
+        
+        {/* Decorative elements */}
         <div className="absolute w-96 h-96 -top-20 -right-20 bg-karmik-200 rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute w-full h-full opacity-50 mix-blend-soft-light">
@@ -47,19 +45,19 @@ const Hero = () => {
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
-            <div className="flex items-center gap-2 px-4 py-2 bg-karmik-600/10 rounded-full">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full">
               <TreePine className="h-4 w-4 text-karmik-600" />
               <span className="text-sm font-medium text-karmik-600">Outdoor Rental Management</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
               Gear Up Your{" "}
               <span className="bg-gradient-to-r from-karmik-500 to-karmik-600 bg-clip-text text-transparent">
                 Rental Business
               </span>
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-lg">
+            <p className="text-lg bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg max-w-lg">
               The rental platform built specifically for outdoor enthusiasts. Help more people explore the outdoors while growing your business.
             </p>
             
@@ -90,7 +88,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-karmik-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-karmik-800">R</div>
                 <div className="w-8 h-8 rounded-full bg-karmik-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-karmik-800">P</div>
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground bg-white/80 backdrop-blur-sm px-2 py-1 rounded-lg">
                 Trusted by <span className="text-foreground font-medium">45+</span> outdoor rental shops
               </p>
             </div>
