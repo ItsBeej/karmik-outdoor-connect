@@ -29,7 +29,7 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
           alt="Outdoor gear shop" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-100"
         />
         
         {/* Decorative elements */}

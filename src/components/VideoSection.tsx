@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import { useState } from "react";
@@ -14,8 +13,7 @@ const VideoSection = () => {
         <img 
           src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
           alt="Outdoor gear shop background" 
-          className="w-full h-full object-cover"
-          style={{ opacity: 0.1 }}
+          className="w-full h-full object-cover opacity-100"
         />
       </div>
       
