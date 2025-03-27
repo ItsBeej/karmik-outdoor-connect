@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-karmik-50 to-white">
-      {/* Full background image with no opacity */}
+      {/* Full background image */}
       <div 
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
         aria-hidden="true"
@@ -29,7 +29,7 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
           alt="Outdoor gear shop" 
-          className="w-full h-full object-cover opacity-100"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         
         {/* Decorative elements */}
