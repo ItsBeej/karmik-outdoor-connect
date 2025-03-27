@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Mountain, TreePine } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50 to-karmik-50">
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-green-50 to-karmik-50">
       {/* Nature-inspired background pattern */}
       <div 
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
@@ -39,34 +39,39 @@ const Hero = () => {
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
+            <div className="flex items-center gap-2 px-4 py-2 bg-green-600/10 rounded-full">
+              <TreePine className="h-4 w-4 text-green-700" />
+              <span className="text-sm font-medium text-green-700">Outdoor Rental Management</span>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
-              Transform Your Rental Business with{" "}
-              <span className="bg-gradient-to-r from-karmik-400 to-karmik-600 bg-clip-text text-transparent">
-                Karmik
+              Gear Up Your{" "}
+              <span className="bg-gradient-to-r from-green-600 to-karmik-500 bg-clip-text text-transparent">
+                Rental Business
               </span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-lg">
-              The premier SaaS platform designed exclusively for specialty outdoor retail stores. Streamline operations, boost revenue, and provide exceptional customer experiences.
+              The rental platform built specifically for outdoor enthusiasts. Help more people explore the outdoors while growing your business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button 
                 size="lg" 
-                className="bg-karmik-500 hover:bg-karmik-600 shadow-sm group"
+                className="bg-green-600 hover:bg-green-700 shadow-sm group"
                 onClick={() => scrollToSection("contact")}
               >
-                Book a Demo Call
+                Book a Demo
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="shadow-sm bg-white/80 backdrop-blur-sm hover:bg-green-50 transition-all"
+                className="shadow-sm bg-white/80 backdrop-blur-sm hover:bg-green-50 transition-all border-green-200"
                 onClick={() => scrollToSection("video")}
               >
-                <Play className="mr-2 h-4 w-4 text-karmik-500" />
-                Watch Product Video
+                <Play className="mr-2 h-4 w-4 text-green-600" />
+                See It In Action
               </Button>
             </div>
             
@@ -78,7 +83,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-green-800">P</div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Trusted by <span className="text-foreground font-medium">45+</span> outdoor retailers
+                Trusted by <span className="text-foreground font-medium">45+</span> outdoor rental shops
               </p>
             </div>
           </div>
@@ -86,8 +91,8 @@ const Hero = () => {
           <div className="lg:col-span-6 animate-fade-in" style={{ '--index': 1 } as React.CSSProperties}>
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-br from-green-100 to-blue-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
-              <div className="relative overflow-hidden rounded-2xl shadow-lg subtle-shadow">
-                <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm border border-white/20">
+              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm">
                   <div className="flex gap-1.5 px-2">
                     <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
                     <div className="w-2.5 h-2.5 bg-amber-400 rounded-full"></div>
@@ -105,6 +110,14 @@ const Hero = () => {
               </div>
               <div className="absolute top-1/2 -left-4 w-14 h-14 bg-green-500 rounded-full blur-2xl opacity-20"></div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-karmik-500 rounded-full blur-3xl opacity-20"></div>
+              
+              {/* Outdoor gear decorative elements */}
+              <div className="absolute -bottom-3 -left-8 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm rotate-6">
+                <Mountain className="h-8 w-8 text-green-600" />
+              </div>
+              <div className="absolute top-10 -right-6 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm -rotate-12">
+                <TreePine className="h-6 w-6 text-green-600" />
+              </div>
             </div>
           </div>
         </div>
