@@ -26,14 +26,21 @@ const Hero = () => {
         className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
         aria-hidden="true"
       >
-        <div className="absolute w-full h-full opacity-10 mix-blend-soft-light">
+        {/* Mountain landscape background */}
+        <div className="absolute w-full h-full opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80" 
+            alt="Mountain landscape" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute w-96 h-96 -top-20 -right-20 bg-green-200 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute w-full h-full opacity-50 mix-blend-soft-light">
           <svg className="absolute left-0 top-0 w-full h-full" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path className="fill-current text-green-700" d="M0 0 Q 2.5 40 5 0 Q 7.5 40 10 0 Q 12.5 40 15 0 Q 17.5 40 20 0 Q 22.5 40 25 0 Q 27.5 40 30 0 Q 32.5 40 35 0 Q 37.5 40 40 0 Q 42.5 40 45 0 Q 47.5 40 50 0 Q 52.5 40 55 0 Q 57.5 40 60 0 Q 62.5 40 65 0 Q 67.5 40 70 0 Q 72.5 40 75 0 Q 77.5 40 80 0 Q 82.5 40 85 0 Q 87.5 40 90 0 Q 92.5 40 95 0 Q 97.5 40 100 0 V 100 H 0 Z"></path>
           </svg>
         </div>
-        <div className="absolute w-96 h-96 -top-20 -right-20 bg-green-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute w-full h-full opacity-5" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
       </div>
       
       <div className="container max-w-7xl px-6 md:px-8">
@@ -67,10 +74,10 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="shadow-sm bg-white/80 backdrop-blur-sm hover:bg-green-50 transition-all border-green-200"
+                className="bg-green-600 hover:bg-green-700 text-white shadow-sm"
                 onClick={() => scrollToSection("video")}
               >
-                <Play className="mr-2 h-4 w-4 text-green-600" />
+                <Play className="mr-2 h-4 w-4" />
                 See It In Action
               </Button>
             </div>
