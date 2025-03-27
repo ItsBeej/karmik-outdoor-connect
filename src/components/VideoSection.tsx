@@ -14,7 +14,8 @@ const VideoSection = () => {
         <img 
           src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
           alt="Outdoor gear shop background" 
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.1 }}
         />
       </div>
       
