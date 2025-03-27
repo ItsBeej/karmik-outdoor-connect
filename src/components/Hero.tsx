@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Mountain, TreePine } from "lucide-react";
 
@@ -19,36 +20,24 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden">
-      {/* Full background image */}
-      <div 
-        className="absolute inset-0 w-full h-full" 
-        style={{
-          backgroundImage: "url('/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: -10
-        }}
-        aria-hidden="true"
-      >
-      </div>
-      
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-karmik-50 to-white">
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Text content column */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
             <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full">
               <TreePine className="h-4 w-4 text-karmik-600" />
               <span className="text-sm font-medium text-karmik-600">Outdoor Rental Management</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
               Gear Up Your{" "}
               <span className="bg-gradient-to-r from-karmik-500 to-karmik-600 bg-clip-text text-transparent">
                 Rental Business
               </span>
             </h1>
             
-            <p className="text-lg bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg max-w-lg">
+            <p className="text-lg max-w-lg">
               The rental platform built specifically for outdoor enthusiasts. Help more people explore the outdoors while growing your business.
             </p>
             
@@ -79,34 +68,20 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-karmik-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-karmik-800">R</div>
                 <div className="w-8 h-8 rounded-full bg-karmik-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-karmik-800">P</div>
               </div>
-              <p className="text-sm text-muted-foreground bg-white/80 backdrop-blur-sm px-2 py-1 rounded-lg">
+              <p className="text-sm text-muted-foreground">
                 Trusted by <span className="text-foreground font-medium">45+</span> outdoor rental shops
               </p>
             </div>
           </div>
           
+          {/* Nature background image column */}
           <div className="lg:col-span-6 animate-fade-in" style={{ '--index': 1 } as React.CSSProperties}>
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-br from-karmik-100 to-karmik-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
-                <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm">
-                  <div className="flex gap-1.5 px-2">
-                    <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
-                    <div className="w-2.5 h-2.5 bg-amber-400 rounded-full"></div>
-                    <div className="w-2.5 h-2.5 bg-karmik-300 rounded-full"></div>
-                  </div>
-                </div>
-                <div>
-                  <img 
-                    src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
-                    alt="Karmik dashboard interface" 
-                    className="w-full h-auto"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-              </div>
-              <div className="absolute top-1/2 -left-4 w-14 h-14 bg-karmik-400 rounded-full blur-2xl opacity-20"></div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-karmik-500 rounded-full blur-3xl opacity-20"></div>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
+                alt="Outdoor landscape" 
+                className="w-full h-auto object-cover aspect-[4/3]"
+              />
               
               {/* Outdoor gear decorative elements */}
               <div className="absolute -bottom-3 -left-8 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm rotate-6">
@@ -114,6 +89,30 @@ const Hero = () => {
               </div>
               <div className="absolute top-10 -right-6 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm -rotate-12">
                 <TreePine className="h-6 w-6 text-karmik-500" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Product image below hero */}
+        <div className="mt-20 animate-fade-in" style={{ '--index': 2 } as React.CSSProperties}>
+          <div className="relative mx-auto max-w-4xl">
+            <div className="absolute -inset-1 bg-gradient-to-br from-karmik-100 to-karmik-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
+            <div className="relative overflow-hidden rounded-2xl shadow-lg">
+              <div className="pt-4 pb-2 px-2 bg-white bg-opacity-90 backdrop-blur-sm">
+                <div className="flex gap-1.5 px-2">
+                  <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
+                  <div className="w-2.5 h-2.5 bg-amber-400 rounded-full"></div>
+                  <div className="w-2.5 h-2.5 bg-karmik-300 rounded-full"></div>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
+                  alt="Karmik dashboard interface" 
+                  className="w-full h-auto"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
             </div>
           </div>
