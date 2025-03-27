@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Mountain, TreePine } from "lucide-react";
 
@@ -20,26 +19,18 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-karmik-50 to-white">
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden">
       {/* Full background image */}
       <div 
-        className="absolute inset-0 pointer-events-none overflow-hidden -z-10" 
+        className="absolute inset-0 w-full h-full" 
+        style={{
+          backgroundImage: "url('/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: -10
+        }}
         aria-hidden="true"
       >
-        <img 
-          src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
-          alt="Outdoor gear shop" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        
-        {/* Decorative elements */}
-        <div className="absolute w-96 h-96 -top-20 -right-20 bg-karmik-200 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute w-80 h-80 top-1/3 left-2/3 bg-karmik-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute w-full h-full opacity-50 mix-blend-soft-light">
-          <svg className="absolute left-0 top-0 w-full h-full" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path className="fill-current text-karmik-400" d="M0 0 Q 2.5 40 5 0 Q 7.5 40 10 0 Q 12.5 40 15 0 Q 17.5 40 20 0 Q 22.5 40 25 0 Q 27.5 40 30 0 Q 32.5 40 35 0 Q 37.5 40 40 0 Q 42.5 40 45 0 Q 47.5 40 50 0 Q 52.5 40 55 0 Q 57.5 40 60 0 Q 62.5 40 65 0 Q 67.5 40 70 0 Q 72.5 40 75 0 Q 77.5 40 80 0 Q 82.5 40 85 0 Q 87.5 40 90 0 Q 92.5 40 95 0 Q 97.5 40 100 0 V 100 H 0 Z"></path>
-          </svg>
-        </div>
       </div>
       
       <div className="container max-w-7xl px-6 md:px-8">

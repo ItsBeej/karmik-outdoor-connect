@@ -10,13 +10,15 @@ const VideoSection = () => {
   return (
     <section id="video" className="py-20 relative overflow-hidden">
       {/* Nature-inspired background */}
-      <div className="absolute inset-0 -z-10">
-        <img 
-          src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
-          alt="Outdoor gear shop background" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
+      <div 
+        className="absolute inset-0 w-full h-full" 
+        style={{
+          backgroundImage: "url('/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          zIndex: -10
+        }}
+      ></div>
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-32 h-32 bg-karmik-300 rounded-full opacity-20 blur-3xl"></div>
