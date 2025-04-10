@@ -20,12 +20,16 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-gradient-to-b from-karmik-50 to-white">
-      <div className="container max-w-7xl px-6 md:px-8">
+    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-cover bg-center" style={{ 
+      backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')` 
+    }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+      
+      <div className="container max-w-7xl px-6 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Text content column */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm border border-karmik-100">
               <TreePine className="h-4 w-4 text-karmik-600" />
               <span className="text-sm font-medium text-karmik-600">Outdoor Rental Management</span>
             </div>
@@ -76,19 +80,30 @@ const Hero = () => {
           
           {/* Nature background image column */}
           <div className="lg:col-span-6 animate-fade-in" style={{ '--index': 1 } as React.CSSProperties}>
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-karmik-100/50">
               <img 
-                src="/lovable-uploads/4104c195-af97-49cf-aab2-cf0473d02391.png" 
-                alt="Outdoor landscape" 
+                src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                alt="Ski rental shop" 
                 className="w-full h-auto object-cover aspect-[4/3]"
               />
               
-              {/* Outdoor gear decorative elements */}
-              <div className="absolute -bottom-3 -left-8 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm rotate-6">
-                <Mountain className="h-8 w-8 text-karmik-500" />
+              {/* Floating gear elements */}
+              <div className="absolute -bottom-3 -left-8 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md rotate-6 border border-karmik-100/50">
+                <Mountain className="h-8 w-8 text-karmik-600" />
               </div>
-              <div className="absolute top-10 -right-6 bg-white/80 backdrop-blur-sm p-2 rounded-lg shadow-sm -rotate-12">
-                <TreePine className="h-6 w-6 text-karmik-500" />
+              <div className="absolute top-10 -right-6 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md -rotate-12 border border-karmik-100/50">
+                <TreePine className="h-6 w-6 text-karmik-600" />
+              </div>
+              
+              {/* Visual overlay with rental shop tags */}
+              <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/80 backdrop-blur-md rounded-lg shadow-md">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                    <span className="text-sm font-medium">Equipment Available</span>
+                  </div>
+                  <span className="text-sm font-semibold text-karmik-600">48 items</span>
+                </div>
               </div>
             </div>
           </div>
@@ -117,6 +132,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Decorative scattered outdoor icons */}
+      <div className="absolute bottom-0 left-5 opacity-20 text-karmik-500">
+        <Mountain className="h-16 w-16" />
+      </div>
+      <div className="absolute top-20 right-5 opacity-15 text-karmik-500">
+        <TreePine className="h-24 w-24" />
       </div>
     </section>
   );
