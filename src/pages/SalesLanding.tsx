@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Tree, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle } from "lucide-react";
+import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -46,10 +45,8 @@ const SalesLanding = () => {
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would send data to HubSpot
       console.log("Form submitted with values:", values);
       
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       toast.success("Thanks for your interest! We'll be in touch soon.");
@@ -196,7 +193,7 @@ const SalesLanding = () => {
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/3 flex justify-center">
                 <div className="rounded-full overflow-hidden border-4 border-white shadow-lg w-32 h-32 bg-karmik-100 flex items-center justify-center">
-                  <Tree className="h-16 w-16 text-karmik-500" />
+                  <PalmtreeIcon className="h-16 w-16 text-karmik-500" />
                 </div>
               </div>
               <div className="w-full md:w-2/3">
