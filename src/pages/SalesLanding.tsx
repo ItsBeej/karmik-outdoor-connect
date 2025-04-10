@@ -63,9 +63,13 @@ const SalesLanding = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-cover bg-center pt-24 pb-20 relative overflow-hidden" style={{ 
-        backgroundImage: `url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')`
-      }}>
+      <section className="pt-24 pb-20 relative overflow-hidden" 
+        style={{ 
+          backgroundImage: `url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
         
         {/* Decorative scattered outdoor icons */}
@@ -357,9 +361,13 @@ const SalesLanding = () => {
       <VideoSection />
 
       {/* Contact Form Section */}
-      <section id="contact-sales" className="py-20 bg-secondary/30 bg-cover bg-center relative" style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-      }}>
+      <section id="contact-sales" className="py-20 relative" 
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
         
         <div className="container max-w-7xl px-6 md:px-8 relative z-10">
