@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle } from "lucide-react";
@@ -16,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import VideoSection from "@/components/VideoSection";
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Please enter your full name" }),
@@ -93,6 +95,109 @@ const SalesLanding = () => {
                 alt="Karmik Rental Management Dashboard" 
                 className="w-full h-auto"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Outdoor Retail Gallery Section */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="container max-w-7xl px-6 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="px-4 py-1.5 bg-karmik-500/10 text-karmik-600 text-xs rounded-full font-medium">
+              Built For Your Business
+            </span>
+            <h2 className="mt-6 text-3xl md:text-4xl font-display font-bold">
+              Powering Outdoor Rental Shops
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              From small local shops to large outdoor operations, Karmik helps retailers of all sizes manage their rental inventory.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 0 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1518291344630-4857135fb581?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Outdoor gear shop storefront" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Modern Retail Experience</h3>
+                  <p className="text-white/80 mt-2 text-sm">Create a seamless in-store experience for your customers</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 0.3 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Mountain bikes in rental shop" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Bike Rentals</h3>
+                  <p className="text-white/80 mt-2 text-sm">Effortlessly manage your mountain bike and e-bike fleet</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 0.6 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Ski equipment rental" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Winter Sports</h3>
+                  <p className="text-white/80 mt-2 text-sm">Streamline ski and snowboard rentals during peak season</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 0.9 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1472417583565-62e7bdeda490?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Camping equipment display" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Camping Gear</h3>
+                  <p className="text-white/80 mt-2 text-sm">Track tents, sleeping bags and camping accessories</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 1.2 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1601418688585-1154205c2017?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Water sports equipment" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Water Sports</h3>
+                  <p className="text-white/80 mt-2 text-sm">Manage kayaks, paddle boards, and water equipment</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-xl overflow-hidden h-64 group animate-fade-in" style={{ '--index': 1.5 } as React.CSSProperties}>
+              <img 
+                src="https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Climbing gear organized" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="p-6">
+                  <h3 className="text-white text-xl font-semibold">Climbing Equipment</h3>
+                  <p className="text-white/80 mt-2 text-sm">Keep track of safety-critical climbing gear and maintenance</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -214,6 +319,9 @@ const SalesLanding = () => {
           </div>
         </div>
       </section>
+
+      {/* Add Video Section */}
+      <VideoSection />
 
       {/* Contact Form Section */}
       <section id="contact-sales" className="py-20 bg-secondary/30">
