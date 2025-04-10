@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle, TreePine } from "lucide-react";
@@ -65,9 +64,9 @@ const SalesLanding = () => {
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <section className="bg-cover bg-center pt-24 pb-20 relative overflow-hidden" style={{ 
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+        backgroundImage: `url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')`
       }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
         
         {/* Decorative scattered outdoor icons */}
         <div className="absolute bottom-10 left-5 opacity-20 text-karmik-500">
@@ -359,9 +358,9 @@ const SalesLanding = () => {
 
       {/* Contact Form Section */}
       <section id="contact-sales" className="py-20 bg-secondary/30 bg-cover bg-center relative" style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+        backgroundImage: `url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
       }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
         
         <div className="container max-w-7xl px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
