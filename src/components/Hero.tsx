@@ -20,10 +20,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-cover bg-center" style={{ 
-      backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')` 
-    }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+    <section 
+      className="relative pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1493962853295-0fd70327578a?q=80&w=2000&auto=format&fit=crop')` 
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 pointer-events-none"></div>
       
       <div className="container max-w-7xl px-6 md:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
