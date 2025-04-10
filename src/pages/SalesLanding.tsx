@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle } from "lucide-react";
+import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle, TreePine } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -64,10 +64,22 @@ const SalesLanding = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-karmik-50 to-white pt-24 pb-20">
-        <div className="container max-w-7xl px-6 md:px-8">
+      <section className="bg-cover bg-center pt-24 pb-20 relative overflow-hidden" style={{ 
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+        
+        {/* Decorative scattered outdoor icons */}
+        <div className="absolute bottom-10 left-5 opacity-20 text-karmik-500">
+          <Mountain className="h-16 w-16" />
+        </div>
+        <div className="absolute top-40 right-5 opacity-15 text-karmik-500">
+          <TreePine className="h-24 w-24" />
+        </div>
+        
+        <div className="container max-w-7xl px-6 md:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-karmik-100 rounded-full mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full mb-5 border border-karmik-100 shadow-sm">
               <Mountain className="h-4 w-4 text-karmik-600" />
               <span className="text-sm font-medium text-karmik-600">Specialty Outdoor Retail</span>
             </div>
@@ -79,7 +91,7 @@ const SalesLanding = () => {
             </p>
           </div>
           
-          {/* Product Screenshot */}
+          {/* Product Screenshot with outdoor elements */}
           <div className="relative mx-auto max-w-5xl animate-fade-in">
             <div className="absolute -inset-1 bg-gradient-to-br from-karmik-100 to-karmik-50 rounded-3xl blur-xl opacity-70 -z-10"></div>
             <div className="relative overflow-hidden rounded-2xl shadow-lg border border-border">
@@ -90,11 +102,33 @@ const SalesLanding = () => {
                   <div className="w-2.5 h-2.5 bg-karmik-300 rounded-full"></div>
                 </div>
               </div>
-              <img 
-                src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
-                alt="Karmik Rental Management Dashboard" 
-                className="w-full h-auto"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/917c1eee-ec94-4a13-aaed-978518d1124c.png"
+                  alt="Karmik Rental Management Dashboard" 
+                  className="w-full h-auto"
+                />
+                
+                {/* Floating gear elements */}
+                <div className="absolute -bottom-3 -left-8 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md rotate-6 border border-karmik-100/50">
+                  <Mountain className="h-8 w-8 text-karmik-600" />
+                </div>
+                
+                <div className="absolute top-10 -right-6 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md -rotate-12 border border-karmik-100/50">
+                  <TreePine className="h-6 w-6 text-karmik-600" />
+                </div>
+                
+                {/* Visual overlay with rental shop stats */}
+                <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/80 backdrop-blur-md rounded-lg shadow-md">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                      <span className="text-sm font-medium">Equipment Available</span>
+                    </div>
+                    <span className="text-sm font-semibold text-karmik-600">48 items</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -324,8 +358,12 @@ const SalesLanding = () => {
       <VideoSection />
 
       {/* Contact Form Section */}
-      <section id="contact-sales" className="py-20 bg-secondary/30">
-        <div className="container max-w-7xl px-6 md:px-8">
+      <section id="contact-sales" className="py-20 bg-secondary/30 bg-cover bg-center relative" style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-karmik-50/95 to-white/90 pointer-events-none"></div>
+        
+        <div className="container max-w-7xl px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
               <span className="px-4 py-1.5 bg-karmik-500/10 text-karmik-600 text-xs rounded-full font-medium">
@@ -372,7 +410,7 @@ const SalesLanding = () => {
             </div>
             
             <div>
-              <div className="bg-white p-8 rounded-xl border border-border shadow-sm">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl border border-border shadow-sm">
                 <h3 className="text-xl font-semibold mb-6">Request Your Demo</h3>
                 
                 <Form {...form}>
