@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -144,6 +144,9 @@ const Footer = () => {
             <a href="#" className="text-sm text-muted-foreground hover:text-karmik-500 transition-colors">
               Cookies
             </a>
+            <Link to="/sales" className="text-sm text-muted-foreground/10 hover:text-muted-foreground transition-colors">
+              Sales
+            </Link>
           </div>
         </div>
       </div>
