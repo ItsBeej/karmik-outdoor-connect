@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import { useState } from "react";
@@ -26,13 +25,13 @@ const VideoSection = () => {
       
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
-          <span className="px-4 py-1.5 bg-karmik-500/10 text-karmik-600 text-xs rounded-full font-medium">
+          <span className="px-4 py-1.5 bg-white/30 text-white text-xs rounded-full font-medium">
             Trail To Success
           </span>
-          <h2 className="mt-6 text-3xl md:text-4xl font-display font-bold">
+          <h2 className="mt-6 text-3xl md:text-4xl font-display font-bold text-white">
             See Karmik In The Wild
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-white/80">
             Watch how our platform helps outdoor rental shops streamline operations while getting more adventurers outside with the gear they need.
           </p>
         </div>
