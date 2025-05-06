@@ -62,7 +62,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <a href="#" className="flex items-center">
                 <img 
-                  src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
+                  src="https://karmik.blob.core.windows.net/cdn/logo-orvis-rental.png" 
                   alt="Karmik Solutions" 
                   className="h-8 md:h-10"
                 />
