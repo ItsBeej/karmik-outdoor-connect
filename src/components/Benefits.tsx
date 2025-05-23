@@ -1,5 +1,5 @@
 
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Shield } from 'lucide-react';
 
 const Benefits = () => {
   const benefitsList = [
@@ -32,6 +32,17 @@ const Benefits = () => {
         "Send automated reminders and updates",
         "Build customer loyalty with personalization"
       ]
+    },
+    {
+      title: "Equipment Protection",
+      icon: <Shield className="h-6 w-6 text-karmik-500" />,
+      items: [
+        "Lost & found service included with every badge",
+        "$50,000+ in equipment recovered and returned",
+        "24-hour recovery guarantee for peace of mind",
+        "Reduce replacement costs by up to 80%",
+        "Customer confidence in renting expensive gear"
+      ]
     }
   ];
 
@@ -46,25 +57,30 @@ const Benefits = () => {
             Transform Your Outdoor Rental Business
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Our platform delivers measurable improvements across every aspect of your rental operations, from efficiency to customer satisfaction.
+            Our platform delivers measurable improvements across every aspect of your rental operations, from efficiency to equipment protection.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefitsList.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl border border-border p-6 shadow-sm subtle-shadow animate-fade-in"
-              style={{ '--index': index * 0.3 } as React.CSSProperties}
+              className={`bg-white rounded-xl border border-border p-6 shadow-sm subtle-shadow animate-fade-in ${
+                benefit.title === "Equipment Protection" ? "ring-2 ring-karmik-200 bg-karmik-50/50" : ""
+              }`}
+              style={{ '--index': index * 0.2 } as React.CSSProperties}
             >
-              <h3 className="text-xl font-semibold mb-6 text-center pb-4 border-b">
-                {benefit.title}
-              </h3>
-              <ul className="space-y-4">
+              <div className="flex items-center gap-2 mb-6 pb-4 border-b">
+                {benefit.icon && benefit.icon}
+                <h3 className="text-lg font-semibold text-center flex-1">
+                  {benefit.title}
+                </h3>
+              </div>
+              <ul className="space-y-3">
                 {benefit.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-karmik-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
+                    <CheckCircle className="h-4 w-4 text-karmik-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>

@@ -2,6 +2,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import BadgeProtection from "@/components/BadgeProtection";
+import VisualStory from "@/components/VisualStory";
 import Benefits from "@/components/Benefits";
 import VideoSection from "@/components/VideoSection";
 import Testimonials from "@/components/Testimonials";
@@ -15,6 +17,8 @@ const Index = () => {
       <main>
         <Hero />
         <Features />
+        <BadgeProtection />
+        <VisualStory />
         <Benefits />
         <VideoSection />
         <Testimonials />

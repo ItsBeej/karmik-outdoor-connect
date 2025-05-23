@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Mountain, TreePine } from "lucide-react";
+import { ArrowRight, Play, Mountain, TreePine, Shield } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -33,8 +33,8 @@ const Hero = () => {
           {/* Text content column */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 animate-fade-in">
             <div className="flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm border border-karmik-100">
-              <TreePine className="h-4 w-4 text-karmik-600" />
-              <span className="text-sm font-medium text-karmik-600">Outdoor Rental Management</span>
+              <Shield className="h-4 w-4 text-karmik-600" />
+              <span className="text-sm font-medium text-karmik-600">Badge-Protected Rentals</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-balance">
@@ -45,7 +45,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg max-w-lg">
-              The rental platform built specifically for outdoor enthusiasts. Help more people explore the outdoors while growing your business.
+              The rental platform built specifically for outdoor enthusiasts. Help more people explore the outdoors while growing your business with industry-leading equipment protection.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -64,7 +64,7 @@ const Hero = () => {
                 onClick={() => scrollToSection("video")}
               >
                 <Play className="mr-2 h-4 w-4" />
-                See It In Action
+                See Badge Protection
               </Button>
             </div>
             
@@ -103,7 +103,7 @@ const Hero = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
-                    <span className="text-sm font-medium">Equipment Available</span>
+                    <span className="text-sm font-medium">Badge Protected</span>
                   </div>
                   <span className="text-sm font-semibold text-karmik-600">48 items</span>
                 </div>
