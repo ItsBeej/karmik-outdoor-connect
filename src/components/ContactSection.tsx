@@ -48,7 +48,7 @@ const ContactSection = () => {
               Ready to Transform Your Rental Operations?
             </h2>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Book a personalized demo with our team to see how Karmik can help your business streamline operations and increase revenue.
+              Book a personalized consultation with our team to see how Karmik can help your business streamline operations and increase revenue.
             </p>
 
             <div className="mt-8 space-y-6">
@@ -57,7 +57,7 @@ const ContactSection = () => {
                   <Calendar className="h-5 w-5 text-karmik-500" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Schedule a Demo</h3>
+                  <h3 className="font-medium">Schedule a Consultation</h3>
                   <p className="text-muted-foreground">
                     Book a personalized walkthrough of our platform tailored to your business needs.
                   </p>
@@ -96,7 +96,7 @@ const ContactSection = () => {
 
           <div className="animate-fade-in" style={{ '--index': 0.3 } as React.CSSProperties}>
             <div className="bg-white rounded-xl border border-border shadow-sm subtle-shadow p-6 md:p-8">
-              <h3 className="text-xl font-semibold mb-6">Book Your Demo</h3>
+              <h3 className="text-xl font-semibold mb-6">Book Your Consultation</h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-3">
@@ -165,11 +165,11 @@ const ContactSection = () => {
                   className="w-full bg-karmik-500 hover:bg-karmik-600 shadow-sm"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Schedule My Demo"}
+                  {isSubmitting ? "Sending..." : "Schedule My Consultation"}
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center pt-2">
-                  We'll get back to you within 24 hours to schedule a personalized demo.
+                  We'll get back to you within 24 hours to schedule a personalized consultation.
                 </p>
               </form>
             </div>

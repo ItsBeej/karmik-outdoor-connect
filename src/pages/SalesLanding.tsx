@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle, TreePine } from "lucide-react";
+import { PalmtreeIcon, Calendar, Mountain, BarChart3, Users, ShoppingBag, CheckCircle, TreePine, Shield } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -16,7 +17,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import VideoSection from "@/components/VideoSection";
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Please enter your full name" }),
@@ -357,8 +357,70 @@ const SalesLanding = () => {
         </div>
       </section>
 
-      {/* Add Video Section */}
-      <VideoSection />
+      {/* Badge Protection Section */}
+      <section className="py-20 bg-gradient-to-br from-karmik-50 to-white">
+        <div className="container max-w-7xl px-6 md:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <Badge variant="secondary" className="bg-karmik-500/10 text-karmik-600 mb-6">
+              Lost & Found Protection
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Protect Your Equipment with <span className="text-karmik-600">Karmik Badges</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Our unique badge system protects your investment with industry-leading lost & found recovery, ensuring your gear always finds its way home.
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="w-full md:w-1/2">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1551524164-687a55dd1126?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Outdoor gear with Karmik protection badge" 
+                  className="w-full h-auto object-cover rounded-2xl shadow-lg"
+                />
+                <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-md border border-karmik-100">
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-karmik-500" />
+                    <span className="text-sm font-semibold text-karmik-600">Karmik Protected</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="w-full md:w-1/2 space-y-6">
+              <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-karmik-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="h-6 w-6 text-karmik-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">Recover Lost Equipment</h3>
+                    <p className="text-muted-foreground">
+                      Our badge system has returned over $50,000 worth of equipment to rental shops, protecting your valuable investment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-karmik-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="h-6 w-6 text-karmik-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">Effortless for Customers</h3>
+                    <p className="text-muted-foreground">
+                      Our badge system makes rentals seamless for your customers - no complicated paperwork, just grab and go.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Form Section */}
       <section id="contact-sales" className="py-20 relative" 
@@ -377,7 +439,7 @@ const SalesLanding = () => {
                 Get Started Today
               </span>
               <h2 className="mt-6 text-3xl md:text-4xl font-display font-bold mb-6">
-                Schedule Your Personalized Demo
+                Schedule Your Personalized Consultation
               </h2>
               <p className="text-muted-foreground mb-8">
                 See how Karmik can transform your outdoor rental operations. Our team will walk you through the platform and answer any questions specific to your business.
@@ -390,7 +452,7 @@ const SalesLanding = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Personalized Approach</h3>
-                    <p className="text-muted-foreground">Tailored demonstrations focused on your specific business needs.</p>
+                    <p className="text-muted-foreground">Tailored consultations focused on your specific business needs.</p>
                   </div>
                 </div>
                 
@@ -418,7 +480,7 @@ const SalesLanding = () => {
             
             <div>
               <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl border border-border shadow-sm">
-                <h3 className="text-xl font-semibold mb-6">Request Your Demo</h3>
+                <h3 className="text-xl font-semibold mb-6">Request Your Consultation</h3>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -527,7 +589,7 @@ const SalesLanding = () => {
                       className="w-full bg-karmik-500 hover:bg-karmik-600"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Submitting..." : "Schedule My Demo"}
+                      {isSubmitting ? "Submitting..." : "Schedule My Consultation"}
                     </Button>
                   </form>
                 </Form>

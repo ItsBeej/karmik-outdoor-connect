@@ -39,7 +39,7 @@ const BadgeProtection = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-sm font-medium text-gray-900">Protection Status</div>
-                    <div className="text-xs text-karmik-600">Active • GPS Enabled</div>
+                    <div className="text-xs text-karmik-600">Active</div>
                   </div>
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 </div>

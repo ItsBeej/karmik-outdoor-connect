@@ -5,7 +5,6 @@ import Features from "@/components/Features";
 import BadgeProtection from "@/components/BadgeProtection";
 import VisualStory from "@/components/VisualStory";
 import Benefits from "@/components/Benefits";
-import VideoSection from "@/components/VideoSection";
 import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -20,7 +19,6 @@ const Index = () => {
         <BadgeProtection />
         <VisualStory />
         <Benefits />
-        <VideoSection />
         <Testimonials />
         <ContactSection />
       </main>

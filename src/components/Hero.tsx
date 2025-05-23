@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Mountain, TreePine, Shield } from "lucide-react";
+import { ArrowRight, Mountain, TreePine, Shield } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -54,17 +54,17 @@ const Hero = () => {
                 className="bg-karmik-500 hover:bg-karmik-600 shadow-sm group"
                 onClick={() => scrollToSection("contact")}
               >
-                Book a Demo
+                Book a Consultation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="bg-karmik-500 hover:bg-karmik-600 text-white shadow-sm"
-                onClick={() => scrollToSection("video")}
+                onClick={() => scrollToSection("badge-protection")}
               >
-                <Play className="mr-2 h-4 w-4" />
-                See Badge Protection
+                <Shield className="mr-2 h-4 w-4" />
+                Badge Protection
               </Button>
             </div>
             

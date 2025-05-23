@@ -83,12 +83,9 @@ const Navbar = () => {
                   </button>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <Button variant="outline" size="sm" onClick={() => scrollToSection("video")} className="shadow-sm">
-                    Watch Demo
-                  </Button>
+                <div className="flex items-center">
                   <Button variant="default" size="sm" onClick={() => scrollToSection("contact")} className="bg-karmik-500 hover:bg-karmik-600 shadow-sm">
-                    Book a Call
+                    Book a Consultation
                   </Button>
                 </div>
               </>
@@ -129,11 +126,8 @@ const Navbar = () => {
               Testimonials
             </button>
             <div className="pt-4 flex flex-col space-y-4 w-full max-w-[200px]">
-              <Button variant="outline" onClick={() => scrollToSection("video")} className="w-full shadow-sm">
-                Watch Demo
-              </Button>
               <Button variant="default" onClick={() => scrollToSection("contact")} className="w-full bg-karmik-500 hover:bg-karmik-600 shadow-sm">
-                Book a Call
+                Book a Consultation
               </Button>
             </div>
           </div>
