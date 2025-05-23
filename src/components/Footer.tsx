@@ -1,8 +1,25 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 90;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <footer className="bg-gray-50 pt-16 pb-12 border-t border-border">
       <div className="container max-w-7xl px-6 md:px-8">
@@ -50,19 +67,19 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <button onClick={() => scrollToSection("features")} className="text-muted-foreground hover:text-karmik-500 transition-colors text-left">
                   Features
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#benefits" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <button onClick={() => scrollToSection("benefits")} className="text-muted-foreground hover:text-karmik-500 transition-colors text-left">
                   Benefits
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <Link to="/pricing" className="text-muted-foreground hover:text-karmik-500 transition-colors">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
@@ -83,9 +100,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-karmik-500 transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
@@ -93,14 +110,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <Link to="/careers" className="text-muted-foreground hover:text-karmik-500 transition-colors">
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#testimonials" className="text-muted-foreground hover:text-karmik-500 transition-colors">
+                <button onClick={() => scrollToSection("testimonials")} className="text-muted-foreground hover:text-karmik-500 transition-colors text-left">
                   Customers
-                </a>
+                </button>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-karmik-500 transition-colors">
