@@ -56,8 +56,8 @@ const AboutUs = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Inside outdoor gear store" 
+                src="/lovable-uploads/a1e36b55-042e-4d52-ba37-6c8772c9597f.png" 
+                alt="Skis with Karmik protection badges on snow" 
                 className="rounded-xl shadow-lg"
               />
             </div>
