@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mountain, Users, Target, Heart } from "lucide-react";
@@ -50,14 +51,13 @@ const AboutUs = () => {
                 that simplifies operations, enhances customer experiences, and drives sustainable growth.
               </p>
               <p className="text-muted-foreground">
-                We believe that every outdoor retailer should have access to professional-grade tools 
-                that help them focus on what they do best: connecting people with the outdoors.
+                We built Karmik Solutions because retailers asked for a faster, easier system. By integrating our unique lost-and-found badges with our rental platform, we created a powerful, multi-use solution—two amazing services in one.
               </p>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" 
-                alt="Mountain landscape" 
+                src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Inside outdoor gear store" 
                 className="rounded-xl shadow-lg"
               />
             </div>
