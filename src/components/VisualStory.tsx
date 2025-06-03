@@ -7,7 +7,7 @@ const VisualStory = () => {
       icon: <Shield className="h-8 w-8 text-karmik-500" />,
       title: "Customer Rents Gear",
       description: "Badge-protected equipment ensures peace of mind from the start",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "/lovable-uploads/af53a656-d67e-496e-86cd-94ba9cd23e98.png"
     },
     {
       icon: <MapPin className="h-8 w-8 text-amber-500" />,
