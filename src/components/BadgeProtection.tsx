@@ -55,9 +55,9 @@ const BadgeProtection = () => {
                   <DollarSign className="h-6 w-6 text-karmik-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Thousands Recovered Daily</h3>
+                  <h3 className="text-lg font-semibold mb-2">Thousands Recovered</h3>
                   <p className="text-muted-foreground">
-                    Our badge system has returned <strong>over $50,000 worth of equipment</strong> to rental shops within 24 hours, protecting your most valuable assets.
+                    Our badge system has returned <strong>over $20,000 worth of equipment</strong> to rental shops. We protect your most valuable assets.
                   </p>
                 </div>
               </div>
@@ -69,9 +69,9 @@ const BadgeProtection = () => {
                   <Clock className="h-6 w-6 text-karmik-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">1-Day Return Guarantee</h3>
+                  <h3 className="text-lg font-semibold mb-2">Multi-use Badges Save Time</h3>
                   <p className="text-muted-foreground">
-                    When gear goes missing, our badge technology enables rapid recovery. Most items are returned to shops within 24 hours, minimizing downtime and replacement costs.
+                    Our badges protect your gear and save your employees time. Everything you need to know with the scan of a QR code.
                   </p>
                 </div>
               </div>
