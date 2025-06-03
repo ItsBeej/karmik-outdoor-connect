@@ -7,7 +7,7 @@ const VisualStory = () => {
       icon: <Shield className="h-8 w-8 text-karmik-500" />,
       title: "Customer Rents Gear",
       description: "Badge-protected equipment ensures peace of mind from the start",
-      image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: <MapPin className="h-8 w-8 text-amber-500" />,
@@ -18,7 +18,7 @@ const VisualStory = () => {
     {
       icon: <Home className="h-8 w-8 text-green-500" />,
       title: "Quick Recovery",
-      description: "Badge enables rapid return to shop within 24 hours",
+      description: "Badge enables rapid return to shop through QR identification",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
   ];

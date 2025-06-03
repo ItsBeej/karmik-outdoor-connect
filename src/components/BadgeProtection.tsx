@@ -23,8 +23,8 @@ const BadgeProtection = () => {
           <div className="animate-fade-in" style={{ '--index': 0.2 } as React.CSSProperties}>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1551524164-687a55dd1126?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Outdoor gear with Karmik protection badge" 
+                src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Outdoor gear rental with Karmik protection badge" 
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
               {/* Badge overlay */}
