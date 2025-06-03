@@ -76,7 +76,7 @@ const Hero = () => {
                 <div className="w-8 h-8 rounded-full bg-karmik-100 flex items-center justify-center border-2 border-white text-xs font-semibold text-karmik-800">P</div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Trusted by <span className="text-foreground font-medium">45+</span> outdoor rental shops
+                Trusted by some of the biggest names in the Outdoors
               </p>
             </div>
           </div>
