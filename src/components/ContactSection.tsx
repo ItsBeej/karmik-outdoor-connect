@@ -79,7 +79,7 @@ const ContactSection = () => {
 
           <div className="animate-fade-in" style={{ '--index': 0.3 } as React.CSSProperties}>
             <div className="bg-white rounded-xl border border-border shadow-sm subtle-shadow p-6 md:p-8">
-              <h3 className="text-xl font-semibold mb-6">Book Your Consultation</h3>
+              <h3 className="text-xl font-semibold mb-3">Book Your Consultation</h3>
               
               <div className="hs-form-frame" data-region="na1" data-form-id="109b350b-c68c-428e-a12c-75d1dfc7bdc7" data-portal-id="23725922"></div>
               
