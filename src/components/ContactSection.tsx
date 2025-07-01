@@ -1,40 +1,23 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useEffect } from "react";
 import { Calendar, Mail, Phone } from "lucide-react";
-import { toast } from "sonner";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
+  useEffect(() => {
+    // Load HubSpot form script
+    const script = document.createElement('script');
+    script.src = 'https://js.hsforms.net/forms/embed/23725922.js';
+    script.defer = true;
+    document.head.appendChild(script);
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success("Message received! Our team will contact you shortly.", {
-        description: "Thank you for your interest in Karmik Solutions.",
-        duration: 5000,
-      });
-      setFormData({ name: "", email: "", company: "", message: "" });
-      setIsSubmitting(false);
-    }, 1500);
-  };
+    return () => {
+      // Clean up script when component unmounts
+      const existingScript = document.querySelector('script[src="https://js.hsforms.net/forms/embed/23725922.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -98,80 +81,11 @@ const ContactSection = () => {
             <div className="bg-white rounded-xl border border-border shadow-sm subtle-shadow p-6 md:p-8">
               <h3 className="text-xl font-semibold mb-6">Book Your Consultation</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="space-y-3">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="border-border"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="you@company.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="border-border"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="company" className="text-sm font-medium">
-                    Company Name
-                  </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    placeholder="Your business name"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="border-border"
-                  />
-                </div>
-
-                <div className="space-y-3">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your rental business and needs"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    className="resize-none border-border"
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full bg-karmik-500 hover:bg-karmik-600 shadow-sm"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Schedule My Consultation"}
-                </Button>
-                
-                <p className="text-xs text-muted-foreground text-center pt-2">
-                  We'll get back to you within 24 hours to schedule a personalized consultation.
-                </p>
-              </form>
+              <div className="hs-form-frame" data-region="na1" data-form-id="109b350b-c68c-428e-a12c-75d1dfc7bdc7" data-portal-id="23725922"></div>
+              
+              <p className="text-xs text-muted-foreground text-center pt-4">
+                We'll get back to you within 24 hours to schedule a personalized consultation.
+              </p>
             </div>
           </div>
         </div>
