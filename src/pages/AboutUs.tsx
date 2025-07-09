@@ -16,7 +16,7 @@ const AboutUs = () => {
       <PageNavbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-karmik-50 to-white">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-karmik-50 to-white">
         <div className="container max-w-7xl px-6 md:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-display font-bold text-balance">
