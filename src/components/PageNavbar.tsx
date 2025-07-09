@@ -30,8 +30,30 @@ const PageNavbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const scrollToContact = () => {
-    window.location.href = "/#contact";
+  const scrollToSection = (id: string) => {
+    // If we're not on the homepage, navigate there first
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+      return;
+    }
+    
+    // If we're on the homepage, scroll to the section
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 90;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
   return (
@@ -58,19 +80,19 @@ const PageNavbar = () => {
             {!isMobile ? (
               <>
                 <div className="flex items-center space-x-8">
-                  <Link to="/about" className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
-                    About
-                  </Link>
-                  <Link to="/pricing" className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
-                    Pricing
-                  </Link>
-                  <Link to="/careers" className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
-                    Careers
-                  </Link>
+                  <button onClick={() => scrollToSection("features")} className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
+                    Features
+                  </button>
+                  <button onClick={() => scrollToSection("benefits")} className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
+                    Benefits
+                  </button>
+                  <button onClick={() => scrollToSection("testimonials")} className="text-sm text-foreground/80 hover:text-karmik-500 transition-colors">
+                    Testimonials
+                  </button>
                 </div>
 
                 <div className="flex items-center">
-                  <Button variant="default" size="sm" onClick={scrollToContact} className="bg-karmik-500 hover:bg-karmik-600 shadow-sm">
+                  <Button variant="default" size="sm" onClick={() => scrollToSection("contact")} className="bg-karmik-500 hover:bg-karmik-600 shadow-sm">
                     Book a Consultation
                   </Button>
                 </div>
@@ -102,17 +124,17 @@ const PageNavbar = () => {
               alt="Karmik Solutions" 
               className="h-10 mb-6" 
             />
-            <Link to="/about" onClick={toggleMobileMenu} className="text-xl font-medium transition-colors hover:text-karmik-500">
-              About
-            </Link>
-            <Link to="/pricing" onClick={toggleMobileMenu} className="text-xl font-medium transition-colors hover:text-karmik-500">
-              Pricing
-            </Link>
-            <Link to="/careers" onClick={toggleMobileMenu} className="text-xl font-medium transition-colors hover:text-karmik-500">
-              Careers
-            </Link>
+            <button onClick={() => scrollToSection("features")} className="text-xl font-medium transition-colors hover:text-karmik-500">
+              Features
+            </button>
+            <button onClick={() => scrollToSection("benefits")} className="text-xl font-medium transition-colors hover:text-karmik-500">
+              Benefits
+            </button>
+            <button onClick={() => scrollToSection("testimonials")} className="text-xl font-medium transition-colors hover:text-karmik-500">
+              Testimonials
+            </button>
             <div className="pt-4 flex flex-col space-y-4 w-full max-w-[200px]">
-              <Button variant="default" onClick={scrollToContact} className="w-full bg-karmik-500 hover:bg-karmik-600 shadow-sm">
+              <Button variant="default" onClick={() => scrollToSection("contact")} className="w-full bg-karmik-500 hover:bg-karmik-600 shadow-sm">
                 Book a Consultation
               </Button>
             </div>
