@@ -30,6 +30,20 @@ const PageNavbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToTop = () => {
+    // If we're not on the homepage, navigate there first
+    if (window.location.pathname !== "/") {
+      window.location.href = "/";
+      return;
+    }
+    
+    // If we're on the homepage, scroll to the top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const scrollToSection = (id: string) => {
     // If we're not on the homepage, navigate there first
     if (window.location.pathname !== "/") {
@@ -68,13 +82,13 @@ const PageNavbar = () => {
         <div className="container max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center">
+              <button onClick={scrollToTop} className="flex items-center">
                 <img 
                   src="https://karmik.blob.core.windows.net/cdn/logo-orvis-rental.png" 
                   alt="Karmik Solutions" 
                   className="h-8 md:h-10"
                 />
-              </Link>
+              </button>
             </div>
             
             {!isMobile ? (
@@ -119,11 +133,13 @@ const PageNavbar = () => {
             </button>
           </div>
           <div className="flex flex-col items-center justify-center h-[80vh] space-y-8">
-            <img 
-              src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
-              alt="Karmik Solutions" 
-              className="h-10 mb-6" 
-            />
+            <button onClick={scrollToTop} className="flex items-center">
+              <img 
+                src="https://www.karmikoutdoors.com/cdn/shop/files/karmik-outdoors-logo.png?v=1734445838" 
+                alt="Karmik Solutions" 
+                className="h-10 mb-6" 
+              />
+            </button>
             <button onClick={() => scrollToSection("features")} className="text-xl font-medium transition-colors hover:text-karmik-500">
               Features
             </button>
