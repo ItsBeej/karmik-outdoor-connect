@@ -26,7 +26,7 @@ const Testimonials = () => {
     setCurrentIndex(prevIndex => prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1);
   };
   return (
-    <section className="py-20 bg-muted/30">
+    <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container max-w-7xl px-6 md:px-8">
         <div className="text-center mb-16">
           <span className="px-4 py-1.5 bg-primary/10 text-primary text-xs rounded-full font-medium">
